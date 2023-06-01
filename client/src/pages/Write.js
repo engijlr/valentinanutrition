@@ -1,7 +1,7 @@
 import React from "react";
 
-const Write = () => {
+const WritePage = () => {
   return <div>Write</div>;
 };
 
-export default Write;
+export default WritePage;
