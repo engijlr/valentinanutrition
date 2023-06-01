@@ -6,3 +6,8 @@
 .app .container {
   width: 1024px;
 }
+
+.app .container .link {
+  text-decoration: none;
+  color: inherit;
+}
