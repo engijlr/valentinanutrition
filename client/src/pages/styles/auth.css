@@ -20,6 +20,7 @@
   width: 200px;
   gap: 20px;
   border-radius: 10px;
+  background-color: aquamarine;
 }
 
 .auth form input {
