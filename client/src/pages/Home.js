@@ -1,14 +1,17 @@
+import Banner from "../components/Banner";
 import RecipesPreview from "../components/RecipesPreview";
+import Services from "../components/Services";
+import Testimonial from "../components/Testimonial";
 
 const HomePage = () => {
   return (
-    <div>
-      <div>Banner</div>
-      <div>Services</div>
+    <>
+      <Banner />
       <RecipesPreview />
-      <div>Testimonials</div>
+      <Services />
+      <Testimonial />
       <div>Contact Me</div>
-    </div>
+    </>
   );
 };
 

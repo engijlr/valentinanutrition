@@ -1,42 +1,37 @@
-import { useState } from "react";
-import Recipes from "./RecipesData";
-import { Link } from "react-router-dom";
-import "./styles/RecipesPreview.css";
+import AboutBackground from "../assets/about-background.png";
+import AboutBackgroundImage from "../assets/about-background-image.png";
+import { BsFillPlayCircleFill } from "react-icons/bs";
 
 const RecipesPreview = () => {
-  const [items, setItems] = useState(Recipes);
-
   return (
-    <section className="work container section">
-      <h2 className="section__title">Latest recipes</h2>
-      <div className="filters">
-        <span className="recipe_item">Everything</span>
-        <span className="recipe_item">Breakfast</span>
-        <span className="recipe_item">Lunch</span>
-        <span className="recipe_item">Snacks</span>
-        <span className="recipe_item">Dinner</span>
+    <div className="about-section-container">
+      <div className="about-background-image-container">
+        <img src={AboutBackground} alt="" />
       </div>
-
-      <div className="work_container grid">
-        {items.map((item) => {
-          const { id, image, title, category } = item;
-          return (
-            <div className="card" key={id}>
-              <div className="thumbnail">
-                <img src={image} className="image" />
-                <div className="mask"></div>
-              </div>
-
-              <span className="category">{category}</span>
-              <h3 className="work_title">{title}</h3>
-              <Link to="/home" className="button">
-                <i className="icon-link button-icon">link</i>
-              </Link>
-            </div>
-          );
-        })}
+      <div className="about-section-image-container">
+        <img src={AboutBackgroundImage} alt="" />
       </div>
-    </section>
+      <div className="about-section-text-container">
+        <p className="primary-subheading">About</p>
+        <h1 className="primary-heading">
+          Food Is An Important Part Of A Balanced Diet
+        </h1>
+        <p className="primary-text">
+          Lorem ipsum dolor sit amet consectetur. Non tincidunt magna non et
+          elit. Dolor turpis molestie dui magnis facilisis at fringilla quam.
+        </p>
+        <p className="primary-text">
+          Non tincidunt magna non et elit. Dolor turpis molestie dui magnis
+          facilisis at fringilla quam.
+        </p>
+        <div className="about-buttons-container">
+          <button className="secondary-button">Learn More</button>
+          <button className="watch-video-button">
+            <BsFillPlayCircleFill /> Watch Video
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
